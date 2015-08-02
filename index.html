@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Safer Intersections</title>
+	<link rel="stylesheet" href="css/index.css"></style>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCDxQe7G_j-_11XbOwYGIPPVtbkgrugag"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=drawing"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+	<div id="instructions">
+		<img id="logo" src="http://static1.squarespace.com/static/53dd6676e4b0fedfbc26ea91/t/54ecceb0e4b03a84d2b20fd7/1424805553424/">
+		<h1> Where did you get hit? </h1>
+		<p> Enter the address where you got hit in the textbox below and click start <strong>twice</strong>. </p>
+		<p> Trace the path you were walking with the line tool. </p>
+		<p> (No need to click and drag. Click the line tool, then just click the places you passed.)
+		<p> After that, click on the marker tool. </p>
+		<p> Then leave markers with the marker tools on the intersections that you passed. </p>
+		<p> Make sure to place the markers in the order you passed the intersections.</p>
+		<p> Click reset if you made a mistake when placing the markers. </p>
+		<p> Click finish when you're done. </p>
+		<input id="address" placeholder="Enter address of accident">
+		<input id="submit-address" type="Submit" value="Start">
+		<input id="reset" type="Submit" value="Reset">
+		<input id="finish" type="Submit" value="Finish">
+	</div>
+	<div id="map-canvas">
+	</div>
+</body>
+</html>

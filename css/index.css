@@ -1,0 +1,19 @@
+#map-canvas { 
+ 	height: 600px; 
+ 	width:800px; 
+ 	margin-right: 25px; 
+ 	padding: 0;
+ 	float:right;
+}
+
+#address{
+	width:150px;
+}
+
+#instructions{
+	float:left;
+}
+
+#logo{
+	margin-bottom:80px;
+}
