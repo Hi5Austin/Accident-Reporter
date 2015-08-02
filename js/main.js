@@ -15,9 +15,14 @@ $(document).ready(function(){
 	});
 
 	$("#finish").click(function(){
-		console.log(intersectionCoordinates);
+		//console.log(intersectionCoordinates);
+		for(var i = 0; i < intersectionCoordinates.length; i++){
+			if(intersectionCoordinates[i] === null){
+				intersectionCoordinates.splice(i,1);
+			}
+		}
 		accidentsRef.push({
-			coordinates: intersectionCoordinates,
+			coordinates: intersectionCoordinates
 		})
 		alert("Thank you for your time.");
 		window.location.reload();
