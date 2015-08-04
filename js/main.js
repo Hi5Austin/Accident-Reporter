@@ -16,11 +16,13 @@ $(document).ready(function(){
 
 	$("#finish").click(function(){
 		//console.log(intersectionCoordinates);
+		var tempArray = [];
 		for(var i = 0; i < intersectionCoordinates.length; i++){
-			if(intersectionCoordinates[i] === null){
-				intersectionCoordinates.splice(i,1);
+			if(intersectionCoordinates[i] != null){
+				tempArray.push(intersectionCoordinates[i]);
 			}
 		}
+		intersectionCoordinates = tempArray;
 		accidentsRef.push({
 			coordinates: intersectionCoordinates
 		})
