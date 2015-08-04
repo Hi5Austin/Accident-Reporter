@@ -28,28 +28,28 @@ function setGeocode(json){
 }
 
 function initialize() {
-    var map = new google.maps.Map(document.getElementById('map-canvas'));
+        var map = new google.maps.Map(document.getElementById('map-canvas'));
 	map.setZoom(zoom);
 	map.setCenter(new google.maps.LatLng(lat,lng))
 
 	drawingManager = new google.maps.drawing.DrawingManager({
-    drawingMode: google.maps.drawing.OverlayType.MARKER,
-    drawingControl: true,
-    drawingControlOptions: {
-      position: google.maps.ControlPosition.TOP_CENTER,
-      drawingModes: [
-        google.maps.drawing.OverlayType.MARKER,
-        google.maps.drawing.OverlayType.POLYLINE,
-      ]
-    },
-    markerOptions: {
-      icon: 'http://cdn.leafletjs.com/leaflet-0.4/images/marker-icon.png'
-    },
-  });
-  drawingManager.setMap(map);
+    		drawingMode: google.maps.drawing.OverlayType.MARKER,
+    		drawingControl: true,
+    		drawingControlOptions: {
+      	        	position: google.maps.ControlPosition.TOP_CENTER,
+      			drawingModes: [
+        			google.maps.drawing.OverlayType.MARKER,
+        			google.maps.drawing.OverlayType.POLYLINE,
+      			]
+    		},
+    		markerOptions: {
+			 icon: 'http://cdn.leafletjs.com/leaflet-0.4/images/marker-icon.png'
+    		},
+  	});
+  	drawingManager.setMap(map);
 
-  google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
-    	intersectionCoordinates.push(event.overlay.position);
-    	markers.push(event);
-  });
+  	google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
+    		intersectionCoordinates.push(event.overlay.position);
+    		markers.push(event);
+ 	});
 }
